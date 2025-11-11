@@ -265,7 +265,6 @@
         CHECK (status IN ('approved', 'rejected', 'pending'))
     );
 
-    -- TODO: create assertions
-    -- TODO: apply advanced checks
+    -- TODO: create assertions and apply advanced checks
 
 GO;

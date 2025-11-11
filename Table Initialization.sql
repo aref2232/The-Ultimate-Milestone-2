@@ -242,25 +242,25 @@
 
     -- 18. Employee_Replace_Employee
     CREATE TABLE Employee_Replace_Employee (
-        Emp1_ID INT,
-        Emp2_ID INT,
+        emp1_ID INT,
+        emp2_ID INT,
         from_date DATE,
         to_date DATE,
 
-        PRIMARY KEY (Emp1_ID, Emp2_ID),
-        FOREIGN KEY (Emp1_ID) REFERENCES Employee(employee_ID),
-        FOREIGN KEY (Emp2_ID) REFERENCES Employee(employee_ID)
+        PRIMARY KEY (emp1_ID, emp2_ID),
+        FOREIGN KEY (emp1_ID) REFERENCES Employee(employee_ID),
+        FOREIGN KEY (emp2_ID) REFERENCES Employee(employee_ID)
     );
 
     -- 19. Employee_Approve_Leave
     CREATE TABLE Employee_Approve_Leave (
-        Emp1_ID INT,
-        Leave_ID INT,
+        emp1_ID INT,
+        leave_ID INT,
         status VARCHAR(50) DEFAULT 'pending',
 
-        PRIMARY KEY (Emp1_ID, Leave_ID),
-        FOREIGN KEY (Emp1_ID) REFERENCES Employee(employee_ID),
-        FOREIGN KEY (Leave_ID) REFERENCES Leave(request_ID),
+        PRIMARY KEY (emp1_ID, eeave_ID),
+        FOREIGN KEY (emp1_ID) REFERENCES Employee(employee_ID),
+        FOREIGN KEY (eeave_ID) REFERENCES Leave(request_ID),
 
         CHECK (status IN ('approved', 'rejected', 'pending'))
     );
